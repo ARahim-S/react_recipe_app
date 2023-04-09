@@ -15,9 +15,13 @@ const Navbar = () => {
         <span />
       </Hamburger>
       <Menu isOpen={isOpen}>
-        <MenuLink to="/about">About</MenuLink>
+        <MenuLink onClick={() => setIsOpen(!isOpen)} to="/about">
+          About
+        </MenuLink>
         <MenuLink to="/github">Github</MenuLink>
-        <MenuLink to="/">Logout</MenuLink>
+        <MenuLink onClick={() => setIsOpen(!isOpen)} to="/">
+          Logout
+        </MenuLink>
       </Menu>
     </Nav>
   );
