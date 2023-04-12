@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Header from "../../components/header/Header";
 import axios from "axios";
+import { HomeImg, ImgDiv, MainContainer } from "./HomeStyles";
+import Cook from "../../assets/cook.png";
+import RecipeCardComponent from "./RecipeCardComponent";
 
 const Home = () => {
   const [query, setQuery] = useState("");
@@ -29,6 +32,18 @@ const Home = () => {
         query={query}
         mealTypes={mealTypes}
       />
+
+      {food ? (
+        <MainContainer>
+          {food.map((item, index) => (
+            <RecipeCardComponent key={index} item={item.recipe} />
+          ))}
+        </MainContainer>
+      ) : (
+        <ImgDiv>
+          <HomeImg src={Cook} />
+        </ImgDiv>
+      )}
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const MainContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -37,10 +38,13 @@ export const Button = styled.button`
   border: none;
   margin: 10px;
   cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
 `;
 
 export const RecipeHeader = styled.h1`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: center;
 `;
 

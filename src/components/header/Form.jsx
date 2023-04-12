@@ -12,7 +12,6 @@ const Form = ({
     e.preventDefault();
     getData();
     setQuery("");
-    setMealTypes("");
   };
 
   return (
