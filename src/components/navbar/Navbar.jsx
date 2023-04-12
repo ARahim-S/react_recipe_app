@@ -3,6 +3,10 @@ import { Hamburger, Logo, Menu, MenuLink, Nav } from "./NavbarStyles";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleMouseUp = () => {
+    sessionStorage.clear();
+  };
   return (
     <Nav>
       <Logo to="/home">
@@ -19,7 +23,11 @@ const Navbar = () => {
           About
         </MenuLink>
         <MenuLink to="/github">Github</MenuLink>
-        <MenuLink onClick={() => setIsOpen(!isOpen)} to="/">
+        <MenuLink
+          onClick={() => setIsOpen(!isOpen)}
+          to="/"
+          onMouseUp={handleMouseUp}
+        >
           Logout
         </MenuLink>
       </Menu>
