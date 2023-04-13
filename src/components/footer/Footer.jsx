@@ -1,7 +1,7 @@
-import React from "react";
+import { FooterDiv } from "./FooterStyles";
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return <FooterDiv>Copyright AS</FooterDiv>;
 };
 
 export default Footer;
